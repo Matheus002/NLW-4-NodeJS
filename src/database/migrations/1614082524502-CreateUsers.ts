@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from "typeorm";
+import {InsertValuesMissingError, MigrationInterface, QueryRunner, Table} from "typeorm";
 
 export class CreateUsers1614082524502 implements MigrationInterface {
 
@@ -28,6 +28,7 @@ export class CreateUsers1614082524502 implements MigrationInterface {
                 ]
             })
         )
+
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
